@@ -31,16 +31,16 @@ class NavBarBottom extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           IconButton(
+            icon: SvgPicture.asset("assets/icons/flower.svg"),
             onPressed: () {},
-            icon: SvgPicture.asset('assets/icons/flower.svg'),
           ),
           IconButton(
+            icon: SvgPicture.asset("assets/icons/heart-icon.svg"),
             onPressed: () {},
-            icon: SvgPicture.asset('assets/icons/flower.svg'),
           ),
           IconButton(
+            icon: SvgPicture.asset("assets/icons/user-icon.svg"),
             onPressed: () {},
-            icon: SvgPicture.asset('assets/icons/flower.svg'),
           ),
         ],
       ),

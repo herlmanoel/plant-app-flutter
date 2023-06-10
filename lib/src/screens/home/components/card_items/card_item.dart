@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app/src/constants.dart';
 
-class FeaturedPlants extends StatelessWidget {
-  FeaturedPlants({
+class LargeCard extends StatelessWidget {
+  LargeCard({
     super.key,
     required this.size,
     required this.image,
@@ -14,6 +14,14 @@ class FeaturedPlants extends StatelessWidget {
   void Function()? press;
   @override
   Widget build(BuildContext context) {
+    var boxDecoration = BoxDecoration(
+      borderRadius: BorderRadius.circular(10),
+      image: DecorationImage(
+        fit: BoxFit.cover,
+        image: AssetImage(image),
+      ),
+    );
+    
     return GestureDetector(
       onTap: press,
       child: Container(
@@ -24,13 +32,7 @@ class FeaturedPlants extends StatelessWidget {
         ),
         width: size.width * 0.8,
         height: 185,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          image: DecorationImage(
-            fit: BoxFit.cover,
-            image: AssetImage(image),
-          ),
-        ),
+        decoration: boxDecoration,
       ),
     );
   }

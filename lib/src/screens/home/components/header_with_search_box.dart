@@ -5,10 +5,11 @@ import 'package:plant_app/src/constants.dart';
 class HeaderWithSearchBox extends StatelessWidget {
   const HeaderWithSearchBox({
     super.key,
-    required this.size,
+    required this.size, required this.title,
   });
 
   final Size size;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class HeaderWithSearchBox extends StatelessWidget {
       child: Stack(
         children: <Widget>[
           Container(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
               left: kDefaultPadding,
               right: kDefaultPadding,
               bottom: 36 + kDefaultPadding,
@@ -33,7 +34,7 @@ class HeaderWithSearchBox extends StatelessWidget {
             child: Row(
               children: [
                 Text(
-                  'Hi Uishopy!',
+                   title,
                   style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
